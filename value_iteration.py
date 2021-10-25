@@ -19,10 +19,7 @@ class Args:
     gamma = 0.99
     alpha = 0.1
 
-    pi_iters = 100
     vi_iters = 100
-    ql_iters = 20000
-    t_decay = 10000
 
 
 args = Args()
@@ -59,7 +56,6 @@ class ValueIteration:
             pi_old = np.copy(pi)
             v_old = np.copy(v)
 
-            ## TODO ##
             # your code here
             # hint: Here, you will need to fill the new policy pi and value function v for all states s.
             # I.e., you need to update pi[s], v[s] for all s.

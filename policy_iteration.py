@@ -21,9 +21,6 @@ class Args:
     alpha = 0.1
 
     pi_iters = 100
-    vi_iters = 100
-    ql_iters = 20000
-    t_decay = 10000
 
 
 args = Args()
@@ -59,7 +56,6 @@ class PolicyIteration:
             # save current estimate
             v_prev = np.copy(v)
 
-            ## TODO ##
             # your code here
             # hint: you will need to iterate over states and actions here
             for s in range(env.nS):
@@ -86,7 +82,6 @@ class PolicyIteration:
         pi = np.zeros(shape=self.n_states)  # contains the actual actions
         pi_prob = np.ones(shape=(self.n_states, self.n_actions))  # contains the action probabilities for each state
 
-        ## TODO ##
         # your code here
         # hint: This again requires you to iterate over states and actions in some way.
         # You can use np.argmax() to get the index of the biggest value in an array.
