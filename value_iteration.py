@@ -1,7 +1,6 @@
 import gym
 from gym.envs.toy_text.frozen_lake import FrozenLakeEnv
 import numpy as np
-from utilities import *
 from gridworld_utilities import *
 
 np.random.seed(0)
@@ -60,7 +59,6 @@ class ValueIteration:
             # hint: Here, you will need to fill the new policy pi and value function v for all states s.
             # I.e., you need to update pi[s], v[s] for all s.
             for s in range(env.nS):
-                v[s] = 0
                 q = np.zeros(env.nA)
                 for a in range(env.nA):
                     next_state_tuples = env.P[s][a]  # P[s][a] == [(probability, nextstate, reward, done), ...]

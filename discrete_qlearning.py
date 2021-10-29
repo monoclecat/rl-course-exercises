@@ -1,7 +1,6 @@
 import gym
 from gym.envs.toy_text.frozen_lake import FrozenLakeEnv
 import numpy as np
-from utilities import *
 from gridworld_utilities import *
 
 np.random.seed(0)
